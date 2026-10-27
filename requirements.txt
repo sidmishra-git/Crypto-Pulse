@@ -1,0 +1,17 @@
+# Dependencies are added phase by phase, as each one is actually needed.
+
+# Phase 1 (ingestion)
+httpx==0.27.2
+
+# Phase 2 (storage)
+sqlalchemy==2.0.35
+psycopg2-binary==2.9.10
+alembic==1.13.2
+python-dotenv==1.0.1
+
+# Phase 4 (API)
+fastapi==0.136.0
+uvicorn[standard]==0.46.0
+
+# Phase 5 (real-time: Redis pub/sub + WebSocket)
+redis==5.0.8
